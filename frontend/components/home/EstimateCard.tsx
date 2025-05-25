@@ -3,11 +3,23 @@ import React, { useState } from "react";
 import { EstimateListItem } from "./EstimateListItem";
 import { EstimateValueCard } from "./EstimateValueCard";
 import Image from "next/image";
+import { getEstimate } from "@/lib/api";
 
 export const EstimateCard: React.FC = () => {
   const [hours, setHours] = useState(40);
+  const [budget, setBudget] = useState(0);
+
+  const handleEstimate = async()=>{
+    try{
+      const data = await getEstimate(240,hours);
+      setBudget(data.budget);
+    }catch(err){
+      console.log(err)
+    }
+  }
+
   return (
-    <div className="shadow-[0_12px_40px_rgba(34,34,39,0.08)] border border-Grayscale/100 lg:w-[309px] xl:max-h-[883px] xl:w-[509px] mb-6 lg:mb-5 xl:mb-[25px]">
+    <div className="shadow-[0_12px_40px_rgba(34,34,39,0.08)] border border-Grayscale/100 lg:w-[309px] xl:max-h-[1024px] xl:w-[509px] mb-6 lg:mb-5 xl:mb-[25px]">
       <div
         id="estimate-counter-section"
         className="flex flex-col items-center gap-y-4 md:gap-y-0 xl:flex-row lg:flex-col lg:gap-y-4 xl:gap-y-0 md:flex-row md:items-center md:justify-between p-4 md:p-8 lg:px-3 lg:pt-6 lg:pb-5 xl:px-12 xl:pt-10 xl:pb-7"
@@ -93,10 +105,10 @@ export const EstimateCard: React.FC = () => {
           <EstimateValueCard title={"Designer person-hours"} value={0} />
           <EstimateValueCard title={"Developer person-hours"} value={240} />
           <EstimateValueCard title={"Total man/hours"} value={240} />
-          <EstimateValueCard title={"Budget"} value={0} />
+          <EstimateValueCard title={"Budget"} value={budget} />
         </div>
         <div id="button-section" className="w-full">
-          <button className="bg-EstimateButton p-2 md:px-4 md:py-2 lg:px-4 lg:py-2 xl:px-6 xl:py-4 rounded-[4px] w-full">
+          <button onClick={()=> handleEstimate()} className="bg-EstimateButton p-2 md:px-4 md:py-2 lg:px-4 lg:py-2 xl:px-6 xl:py-4 rounded-[4px] w-full">
             <h1 className="font-bold text-white lg:text-lg xl:text-xl xl:leading-[26px]">
               Get your estimate
             </h1>
