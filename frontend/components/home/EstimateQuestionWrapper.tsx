@@ -4,7 +4,7 @@ import { EstimateCard } from './EstimateCard'
 
 export const EstimateQuestionWrapper:React.FC = () => {
   return (
-    <div className='flex lg:pl-16 lg:pt-16 lg:gap-x-6'>
+    <div className='flex justify-center bg-white xl:pl-16 xl:pt-16 xl:gap-x-6'>
         <Questions />
         <EstimateCard />
     </div>
