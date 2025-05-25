@@ -8,7 +8,7 @@ export const Header = () => {
         <h1 className="text-white text-3xl md:text-4xl md:leading-[42.6px] lg:text-5xl lg:leading-[57.6px] font-extrabold">
           Navigate Your App&apos;s Development Journey
         </h1>
-        <p className="text-white text-base text-lg md:text-xl  lg:text-xl lg:leading-[1.4]">
+        <p className="text-white text-lg md:text-xl  lg:text-xl lg:leading-[1.4]">
           Our expertise-backed Project Estimation Tool assists in calculating
           projected development time and budget. Choose options below that best
           characterize your app, outlining the features you need for a precise
