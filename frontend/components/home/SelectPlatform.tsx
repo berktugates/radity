@@ -12,16 +12,16 @@ export const SelectPlatform: React.FC = () => {
   return (
     <div
       id="select-platform"
-      className="bg-SelectPlatformBg xl:px-16 xl:pt-16 xl:pb-24"
+      className="bg-SelectPlatformBg px-4 pt-4 pb-12 md:px-8 md:pt-8 md:pb-16 lg:px-12 lg:pt-12 lg:pb-20 xl:px-16 xl:pt-16 xl:pb-24"
     >
-      <div id="header-section" className="xl:py-8 xl:pr-8">
-        <h1 className="text-OxfordBlue xl:text-3xl xl:font-semibold xl:leading-[36px]">
+      <div id="header-section" className="py-2 pr-4 md:py-4 md:pr-6 lg:py-6 lg:pr-8 xl:py-8 xl:pr-8">
+        <h1 className="text-OxfordBlue font-semibold text-2xl xl:text-3xl xl:leading-[36px]">
           What platforms do you need?
         </h1>
       </div>
       <div
         id="platforms"
-        className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-2 xl:grid-cols-4 gap-x-4"
+        className="grid sm:grid-cols-4 gap-y-4 md:grid-cols-2 md:gap-x-4 md:gap-y-4 xl:gap-y-0 xl:grid-cols-4 "
       >
         <PlatformCard
           title="Web app"

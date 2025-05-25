@@ -20,7 +20,7 @@ export const PlatformCard: React.FC<IPlatformCard> = ({
       onClick={()=>{
         onClick()
       }}
-      className={`xl:min-w-[316px] xl:min-h-[219px] xl:p-9 ${
+      className={`xl:min-w-[316px] xl:min-h-[219px] p-5 md:p-5 lg:p-7 xl:p-9 ${
         selected
           ? "bg-ByzantineBlue border-4 border-NeonAqua"
           : "bg-white border border-Grayscale"
