@@ -1,5 +1,5 @@
 export async function getEstimate(rate:number, hours:number){
-    const res = await fetch('http://localhost:5001/estimation', {
+    const res = await fetch('https://radity-case-uq5s.onrender.com/estimation', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
