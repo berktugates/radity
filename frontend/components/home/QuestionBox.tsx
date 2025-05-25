@@ -23,7 +23,7 @@ export const QuestionBox: React.FC<QuestionBoxProps> = ({ section }) => {
         <div
         onClick={()=>setSelectedQuestionBox(option.title)}
           key={index}
-          className={`rounded-[4px] bg-white  xl:h-[236px] xl:w-[239px] ${selectedQuestionBox ===option.title ? "border-NeonAqua border-4" : "border border-Grayscale"}`}
+          className={`rounded-[4px] bg-white lg:w-10  xl:h-[236px] xl:w-[239px] ${selectedQuestionBox ===option.title ? "border-NeonAqua border-4" : "border border-Grayscale"}`}
         >
           <div className="xl:px-6 xl:pt-6 xl:pb-4 flex items-center justify-between w-full">
             <Image

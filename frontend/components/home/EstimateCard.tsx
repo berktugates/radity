@@ -19,7 +19,7 @@ export const EstimateCard: React.FC = () => {
   }
 
   return (
-    <div className="shadow-[0_12px_40px_rgba(34,34,39,0.08)] border border-Grayscale/100 lg:w-[309px] xl:max-h-[1024px] xl:w-[509px] mb-6 lg:mb-5 xl:mb-[25px]">
+    <div className="shadow-[0_12px_40px_rgba(34,34,39,0.08)] border border-Grayscale/100 lg:w-[309px] xl:max-h-[1024px] xl:w-[509px] mb-6 mt-6 lg:mt-0 lg:mb-5 xl:mb-[25px]">
       <div
         id="estimate-counter-section"
         className="flex flex-col items-center gap-y-4 md:gap-y-0 xl:flex-row lg:flex-col lg:gap-y-4 xl:gap-y-0 md:flex-row md:items-center md:justify-between p-4 md:p-8 lg:px-3 lg:pt-6 lg:pb-5 xl:px-12 xl:pt-10 xl:pb-7"

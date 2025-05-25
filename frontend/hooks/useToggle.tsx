@@ -1,20 +1,22 @@
 import { useState } from "react";
 
 export const useToggle = () => {
-    const [selectedQuestionCards, setSelectedQuestionCards] = useState<string[]>([]);
+  const [selectedQuestionCards, setSelectedQuestionCards] = useState<string[]>(
+    []
+  );
   const [openSectionIds, setOpenSectionIds] = useState<string[]>([]);
   const toggleSection = (sectionId: string) => {
-    setOpenSectionIds(prev => 
-      prev.includes(sectionId) 
-        ? prev.filter(id => id !== sectionId) 
+    setOpenSectionIds((prev) =>
+      prev.includes(sectionId)
+        ? prev.filter((id) => id !== sectionId)
         : [...prev, sectionId]
     );
   };
 
   const toggleCard = (cardId: string) => {
-    setSelectedQuestionCards(prev => 
+    setSelectedQuestionCards((prev) =>
       prev.includes(cardId)
-        ? prev.filter(id => id !== cardId)
+        ? prev.filter((id) => id !== cardId)
         : [...prev, cardId]
     );
   };
@@ -22,6 +24,7 @@ export const useToggle = () => {
     toggleSection,
     toggleCard,
     selectedQuestionCards,
-    openSectionIds
-  }
-}
+    openSectionIds,
+    setOpenSectionIds,
+  };
+};

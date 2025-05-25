@@ -1,12 +1,15 @@
 "use client";
 import React, { useState } from "react";
 import { PlatformCard } from "./PlatformCard";
+import { usePlatform } from "@/context/PlatformContext";
 
 export const SelectPlatform: React.FC = () => {
   const [selectedPlatform, setSelectedPlatform] = useState<string | null>(null);
+  const {setIsSelectedPlatform} = usePlatform();
 
   const handleSelect = (title: string) => {
     setSelectedPlatform(title);
+    setIsSelectedPlatform(true)
   };
 
   return (

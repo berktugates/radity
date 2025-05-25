@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Mulish } from "next/font/google";
 import "./globals.css";
 import { Container } from "./Container";
+import { PlatformProvider } from "@/context/PlatformContext";
 
 const mulish = Mulish({
   variable:"--font-mulish",
@@ -20,6 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <PlatformProvider>
       <body
         className={`${mulish.variable} antialiased`}
       >
@@ -27,6 +29,7 @@ export default function RootLayout({
         {children}
         </Container>
       </body>
+      </PlatformProvider>
     </html>
   );
 }

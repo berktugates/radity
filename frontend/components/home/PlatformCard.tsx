@@ -15,6 +15,7 @@ export const PlatformCard: React.FC<IPlatformCard> = ({
   selected,
   onClick,
 }) => {
+
   return (
     <div
       onClick={()=>{
